@@ -100,6 +100,15 @@
   .use li{display:flex;gap:9px;color:var(--muted);font-size:15.5px;align-items:flex-start}
   .use li::before{content:"";flex:0 0 7px;height:7px;border-radius:50%;background:var(--corail);margin-top:8px}
   .use .ex{margin-top:16px;font-family:JetBrains Mono;font-size:12.5px;color:var(--muted-2);background:var(--bg);border:1px dashed var(--line-2);border-radius:10px;padding:9px 11px}
+  /* COCKPIT (4 espaces) */
+  .feats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .feat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 22px;transition:transform .25s,box-shadow .25s}
+  .feat:hover{transform:translateY(-3px);box-shadow:0 22px 44px -26px rgba(99,102,241,.5)}
+  .feat .tab{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--indigo);background:#EEF2FF;border-radius:999px;padding:5px 12px;margin-bottom:14px}
+  .feat h3{font-size:18px;margin-bottom:10px}
+  .feat ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .feat li{display:flex;gap:8px;color:var(--muted);font-size:14.5px;align-items:flex-start}
+  .feat li::before{content:"";flex:0 0 6px;height:6px;border-radius:50%;background:var(--teal);margin-top:8px}
   /* WHY */
   .why{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:start}
@@ -157,6 +166,7 @@
   @media(max-width:920px){
     .hero .wrap,.why-grid,.price-card{grid-template-columns:1fr}
     .uses,.steps{grid-template-columns:1fr}
+    .feats{grid-template-columns:1fr 1fr}
     .step:not(:last-child){border-right:none;border-bottom:1px solid var(--line)}
     .why-aside{position:static}
     .nav-links{display:none}
@@ -176,6 +186,7 @@
     </div>
     <div class="nav-links">
       <a href="#usages">Ce qu'il fait</a>
+      <a href="#cockpit">Le cockpit</a>
       <a href="#pourquoi">Pourquoi Puzzl</a>
       <a href="#prix">Prix</a>
     </div>
@@ -188,7 +199,7 @@
     <div>
       <p class="eyebrow">Pour les dirigeants sur Pennylane</p>
       <h1>Parlez à votre Pennylane. <span class="accent">En français.</span></h1>
-      <p class="lead">Branchez l'IA sur votre comptabilité. En 1 heure, repartez avec votre copilote, installé et réglé pour vous.</p>
+      <p class="lead">En 1 heure, repartez avec votre cockpit personnalisé : pilotage, factures, balance — branché sur vos chiffres, réglé pour vous.</p>
       <div class="cta-row">
         <a class="btn btn-primary book" href="#reserver">Réserver mon installation</a>
         <a class="btn btn-ghost" href="#usages">Voir ce qu'il fait</a>
@@ -257,6 +268,38 @@
           <li>Vos prochaines échéances en un coup d'œil</li>
         </ul>
         <div class="ex">« Prépare un devis pour Dupont, je valide »</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cockpit" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow">Ce que vous obtenez</p>
+      <h2>Votre cockpit Pennylane, en 4 espaces</h2>
+      <p>Un tableau de bord à votre marque, branché sur vos chiffres — installé chez vous, vos données ne sortent jamais.</p>
+    </div>
+    <div class="feats">
+      <div class="feat">
+        <span class="tab">▦ Dashboard</span>
+        <h3>Vos chiffres clés</h3>
+        <ul><li>CA, résultat, trésorerie, TVA</li><li>Où part votre argent</li><li>Alertes &amp; à traiter, par exercice</li></ul>
+      </div>
+      <div class="feat">
+        <span class="tab">＋ Facture</span>
+        <h3>Créer une facture</h3>
+        <ul><li>Recherche client par nom</li><li>Brouillon prêt en 3 champs</li><li>Vous validez, rien d'automatique</li></ul>
+      </div>
+      <div class="feat">
+        <span class="tab">≣ Balance</span>
+        <h3>Comptes &amp; écritures</h3>
+        <ul><li>Vos comptes, par année</li><li>Le détail de chaque écriture</li><li>La matière de votre FEC</li></ul>
+      </div>
+      <div class="feat">
+        <span class="tab">⚙ Paramètres</span>
+        <h3>Votre clé, vos droits</h3>
+        <ul><li>Votre clé reste chez vous</li><li>Ses droits affichés clairement</li><li>Modifiable en 2 secondes</li></ul>
       </div>
     </div>
   </div>
