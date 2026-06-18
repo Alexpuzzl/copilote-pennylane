@@ -387,8 +387,11 @@
 </footer>
 
 <script>
-  var BOOKING_URL = "mailto:alexandre.assor.puzzl@gmail.com?subject=Réservation%20Copilote%20Pennylane&body=Bonjour%2C%20je%20souhaite%20réserver%20l'installation%20du%20Copilote%20Pennylane.";
-  document.querySelectorAll('.book').forEach(function(a){ a.setAttribute('href', BOOKING_URL); });
+  var BOOKING_URL = "https://bookings.cloud.microsoft/bookwithme/user/7fe22acf96784935935fa65b11a1e101%40experts-entreprendre.com?anonymous&ismsaljsauthenabled=true";
+  document.querySelectorAll('.book').forEach(function(a){
+    a.setAttribute('href', BOOKING_URL);
+    if(BOOKING_URL.indexOf('http')===0){ a.setAttribute('target','_blank'); a.setAttribute('rel','noopener'); }
+  });
 
   var script = [
     {q:"Mes impayés ?", a:{h:"3 factures en retard · 7 240 €", rows:[["Martin SAS","2 900 €","18 j"],["Durand &amp; Co","2 460 €","34 j",1],["Lopez EURL","1 880 €","52 j",1]]}},
